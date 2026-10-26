@@ -1,0 +1,108 @@
+<html DIR="LTR">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8" />
+    <title>k-advice: Changes to this help file</title>
+    <link rel="stylesheet" type="text/css" href="../local/Classic.css"></link>
+    <script src="../local/EventUtilities.js"></script>
+    <script src="../local/SplitScreen.js"></script>
+    <script src="../local/Dropdown.js"></script>
+    <script src="../local/script.js"></script>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle"></input>
+    <input type="hidden" id="hiddenScrollOffset"></input>
+    <div id="header">
+      <table width="100%" id="topTable">
+        <tr id="headerTableRow1"><td align="left"><span id="runningHeaderText">Visual FoxPro 9.0 SP2</span></td></tr>
+        <tr id="headerTableRow2"><td align="left"><span id="nsrTitle">k-advice: Changes to this help file</span></td></tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <p />
+        <p>This help file is the VFPX Edition v1.08 of the Visual FoxPro 9 SP2 help with further corrections. This page lists every change made after v1.08 and the decision on every issue reported to the VFPX project. Keep it up to date with each change.</p>
+
+        <h4 class="subHeading">Sources</h4>
+        <ul>
+          <li><p><b>VFPX Edition v1.08</b>: <a href="https://github.com/VFPX/HelpFile/" target="_blank">github.com/VFPX/HelpFile</a>, commit b911ff1 of 2017-08-23. 2009-2017 placed under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons licensing (CC BY 3.0)</a> by Microsoft Corporation; Shared Source License for VFPX. See <a href="/html/2017-08-22-vfpx.htm">VFP 9 SP2 Help file updates and additions, by the VFPX Community</a>.</p></li>
+          <li><p><b>Pull request #25</b> by Lutz Scheffler, June 2022, not merged by the VFPX project: <a href="https://github.com/VFPX/HelpFile/pull/25" target="_blank">github.com/VFPX/HelpFile/pull/25</a>, the same as the fork <a href="https://github.com/lscheffler/HelpFile" target="_blank">github.com/lscheffler/HelpFile</a>.</p></li>
+          <li><p><b>k-advice software GmbH</b>, October 2026: corrections to the pull request and the open issues below. Tests with Visual FoxPro 9 SP2 (09.00.0000.7423).</p></li>
+        </ul>
+
+        <h4 class="subHeading">Issues reported to the VFPX project</h4>
+        <p>Status of the issues at <a href="https://github.com/VFPX/HelpFile/issues" target="_blank">github.com/VFPX/HelpFile/issues</a> on 2026-10-26. <b>Confirmed</b>: tested in VFP 9 SP2, the report is right. <b>PR #25</b>: the change comes from the pull request.</p>
+        <div class="tableSection">
+          <table width="100%" cellspacing="2" cellpadding="5">
+            <tr><th>Issue</th><th>Title</th><th>Decision and result</th><th>Changed topic</th></tr>
+            <tr><td>#1</td><td>ControlSource</td><td>PR #25, taken over without own test</td><td><a href="/html/76c0d810-a6e4-4076-aa91-0763a6dfe03b.htm">ControlSource Property</a></td></tr>
+            <tr><td>#2</td><td>Spinner Control: duplicate paragraph</td><td>closed by VFPX, no error</td><td>&ndash;</td></tr>
+            <tr><td>#3</td><td>SET BLOCKSIZE command</td><td>PR #25, confirmed: 32768 works, 32769 is a syntax error</td><td><a href="/html/94830793-50f6-4dce-a3a9-38b1bcece01d.htm">SET BLOCKSIZE Command</a></td></tr>
+            <tr><td>#4</td><td>Concordance topics from Visual FoxPro Wiki</td><td>not taken over; reason for this page</td><td>this page</td></tr>
+            <tr><td>#5</td><td>FORCEPATH's second parameter Limit</td><td>PR #25, not tested (crashes with C0000005)</td><td><a href="/html/63809213-c10e-4a3e-92d2-fbf5a89c33b1.htm">FORCEPATH( ) Function</a></td></tr>
+            <tr><td>#6</td><td>SET STEP ON generates Feature not available in VFP6, but not in 7, 8 or 9</td><td>PR #25, not tested</td><td><a href="/html/8b4b3584-e28e-498c-8c24-eb87968540dc.htm">Distributable and Restricted Visual FoxPro Features and Files</a></td></tr>
+            <tr><td>#7</td><td>Wrong clause order for Set Classlib</td><td>PR #25, confirmed: ADDITIVE before ALIAS raises error 36</td><td><a href="/html/11fd4c12-260a-4937-b389-ed0667429d6b.htm">SET CLASSLIB Command</a></td></tr>
+            <tr><td>#8</td><td>TRANSFORM( ) Function: Request for tests</td><td>note added: with SET FIXED ON, TRANSFORM(1) returns 1.00 (SET DECIMALS TO 2)</td><td><a href="/html/a13cde28-affa-4bec-96ab-a4370da9b3b6.htm">TRANSFORM( ) Function</a></td></tr>
+            <tr><td>#9</td><td>SET SECONDS (etc) vs TTOC() / DTOC()</td><td>PR #25, confirmed with an exception added by k-advice: with SET DATE SHORT or LONG, SET SECONDS has no effect; SET DATE kept for parameter 2</td><td><a href="/html/2854910f-6bc3-40a8-a32d-ad799b045205.htm">TTOC( ) Function</a>, <a href="/html/1876ad8e-9c6a-4310-962d-800591a10c3d.htm">DTOC( ) Function</a></td></tr>
+            <tr><td>#10</td><td>Add Method (Collection Class) - GetKey</td><td>PR #25</td><td><a href="/html/ae38d57a-8fb2-42e2-be17-bdddb8e732da.htm">Add Method (Collection Class)</a></td></tr>
+            <tr><td>#11</td><td>#INCLUDE always searching path</td><td>PR #25, confirmed: the header file in the program folder is used</td><td><a href="/html/664378a1-697a-4d4a-9a2d-96fa0c2234bb.htm">#INCLUDE Preprocessor Directive</a></td></tr>
+            <tr><td>#12</td><td>Line number in MODIFY CLASS .. METHOD</td><td>PR #25; the pull request moved NOWAIT behind METHOD, tested: NOWAIT must stay before METHOD, otherwise it is ignored (reported in the issue); order restored</td><td><a href="/html/78dc6e67-6ffc-484d-8370-38e3371964ec.htm">MODIFY CLASS Command</a></td></tr>
+            <tr><td>#13</td><td>SYS(2014) - File search</td><td>PR #25, confirmed; the example output of the pull request corrected to ..\MYDIR1\TEXT1.TXT</td><td><a href="/html/89cb7df0-784b-4675-95f8-76e51cd20a61.htm">SYS(2014) - Minimum Path</a></td></tr>
+            <tr><td>#14</td><td>AEVENTS(,0), Return value</td><td>PR #25, confirmed: 3 through an event binding, otherwise 0</td><td><a href="/html/d8025938-9dc6-4091-840b-2770396946c8.htm">AEVENTS( ) Function</a></td></tr>
+            <tr><td>#15</td><td>Wrong explanation for function JustExt</td><td>PR #25</td><td><a href="/html/5aa1323b-4df7-4dd1-bd1b-7f46aa39010a.htm">File Management</a></td></tr>
+            <tr><td>#16</td><td>SEARCH FOR ELSE</td><td>ignored (index entry only)</td><td>&ndash;</td></tr>
+            <tr><td>#17</td><td>GETWORDNUM / GETWORDCOUNT, default delimiter</td><td>PR #25, confirmed: CR is no default delimiter</td><td><a href="/html/07215de2-1394-4856-9ba2-595c62b7a7c7.htm">GETWORDNUM( ) Function</a>, <a href="/html/71e9ccd9-930a-48f8-90d2-44df34ad4c54.htm">GETWORDCOUNT( ) Function</a></td></tr>
+            <tr><td>#18</td><td>ALTER TABLE .. ADD FOREIGN KEY, problem with COLLATE</td><td>PR #25, confirmed: COLLATE after REFERENCES is a syntax error</td><td><a href="/html/3c5a454a-67ec-48a8-8290-18dd0e8a97ea.htm">ALTER TABLE - SQL Command</a></td></tr>
+            <tr><td>#19</td><td>ALTER TABLE in general</td><td>PR #25</td><td><a href="/html/3c5a454a-67ec-48a8-8290-18dd0e8a97ea.htm">ALTER TABLE - SQL Command</a></td></tr>
+            <tr><td>#20</td><td>SCATTER NAME</td><td>PR #25</td><td><a href="/html/e5d1e608-a184-4cfb-8a06-f83ab8a6c50c.htm">SCATTER Command</a></td></tr>
+            <tr><td>#21</td><td>SET COLLATE vs Relational Operators</td><td>PR #25, confirmed</td><td><a href="/html/77f8984a-1abf-4efc-b63f-bd1700a34c97.htm">SET COLLATE Command</a>, <a href="/html/8935f327-b17d-4dcd-8f71-948f6b68a230.htm">Relational Operators</a></td></tr>
+            <tr><td>#22</td><td>ERROR 1545</td><td>PR #25, confirmed: USE closes without error and reverts the changes</td><td><a href="/html/ea2e9f15-b24a-45ab-96da-decf3a1ba6c1.htm">Error 1545</a></td></tr>
+            <tr><td>#23</td><td>TTOC() example</td><td>PR #25, confirmed</td><td><a href="/html/2854910f-6bc3-40a8-a32d-ad799b045205.htm">TTOC( ) Function</a></td></tr>
+            <tr><td>#24, #25</td><td>Fixes to open issues (pull requests)</td><td>#24 closed, replaced by #25; #25 taken over</td><td>see above</td></tr>
+            <tr><td>#26</td><td>VFP 9 SP2 Help file updates and additions</td><td>closed by VFPX (duplicate of #27)</td><td>&ndash;</td></tr>
+            <tr><td>#27</td><td>Updates topic</td><td>done: overview page and this page</td><td><a href="/html/2017-08-22-vfpx.htm">VFPX overview</a></td></tr>
+            <tr><td>#28</td><td>Error 1801</td><td>confirmed, added</td><td><a href="/html/29fc07cb-940e-42fe-a388-f1f9fe47c32c.htm">SQL: Error correlating fields (Error 1801)</a></td></tr>
+            <tr><td>#29</td><td>Minimum DATE() value</td><td>confirmed and extended: DATE( ) also rejects DATE(1, 1, 1)</td><td><a href="/html/c5f29ec4-794b-4ad5-bf33-f806a334f365.htm">DATE( ) Function</a></td></tr>
+            <tr><td>#30</td><td>REPLACE limit of 128 target fields</td><td>confirmed, added</td><td><a href="/html/7f52db34-68fc-4f9e-abca-fa3f7f02ca19.htm">REPLACE Command</a></td></tr>
+            <tr><td>#31</td><td>TEXT .. TO problems with line feed</td><td>confirmed and extended: a single CR becomes CR+LF</td><td><a href="/html/40efc4ac-180a-4072-b6fa-591a154a98f1.htm">TEXT ... ENDTEXT Command</a></td></tr>
+            <tr><td>#32</td><td>ColumnOrder while setting tables ControlSource</td><td>ignored</td><td>&ndash;</td></tr>
+            <tr><td>#33</td><td>SET MEMOWIDTH</td><td>confirmed, RATLINE( ) added</td><td><a href="/html/e8c5052c-914a-4590-b639-4a83a5c10ae9.htm">SET MEMOWIDTH Command</a></td></tr>
+            <tr><td>#34</td><td>SET ORDER TO TAG bad bug - Beware!</td><td>tested, differs from the report: value 0 gives no error, value 1 error 26, an unknown name error 12; added</td><td><a href="/html/f88b697b-c89f-4343-b9f9-4ecda6fe95ac.htm">SET ORDER Command</a></td></tr>
+            <tr><td>#35</td><td>MESSAGEBOX help does not mention 4096 for nDialogBoxType parameter</td><td>added (MB_SYSTEMMODAL in FoxPro.h)</td><td><a href="/html/09f87252-c201-4402-93f0-b204468955ef.htm">MESSAGEBOX( ) Function</a></td></tr>
+            <tr><td>#36</td><td>SCAN ... ENDSCAN no need to re-SELECT workarea before the ENDSCAN</td><td>note added</td><td><a href="/html/c61f2d7e-2317-477e-9bf9-fa900c1bcac9.htm">SCAN ... ENDSCAN Command</a></td></tr>
+            <tr><td>#37</td><td>How can I install VFP 9 safely</td><td>no help topic</td><td>&ndash;</td></tr>
+            <tr><td>#38</td><td>CODEPAGE and related commands</td><td>ignored</td><td>&ndash;</td></tr>
+            <tr><td>#39</td><td>KeySort</td><td>confirmed: FOR EACH ... FOXOBJECT ignores KeySort; added</td><td><a href="/html/0595af7e-0bac-4f6a-8d32-af302f6f7113.htm">KeySort Property</a>, <a href="/html/b21ba88f-aeda-48e0-a3c5-de9984020281.htm">FOR EACH ... ENDFOR Command</a></td></tr>
+            <tr><td>#40</td><td>TABLEVALIDATE</td><td>compared with the Russian help (help.foxclub.ru): no new content; two wordings clarified</td><td><a href="/html/6fe92268-f8ce-4603-9e7a-6f4ca4cfdfc9.htm">SET TABLEVALIDATE Command</a></td></tr>
+            <tr><td>#41</td><td>No PARAMETER statement is found (Error 1238)</td><td>confirmed: comments and blank lines before LPARAMETERS or PARAMETERS are allowed, code is not; added</td><td><a href="/html/a32ddaa3-112e-4f37-b8af-2a4c05ae6bb6.htm">Error 1238</a></td></tr>
+            <tr><td>#42</td><td>STRTOFILE does not appear in the Index Tab</td><td>closed by VFPX</td><td>&ndash;</td></tr>
+            <tr><td>#43</td><td>Version of dv_foxhelp.chm</td><td>closed by VFPX</td><td>&ndash;</td></tr>
+            <tr><td>#44</td><td>TMPFILES will not take effect if the folder is not created</td><td>note added</td><td><a href="/html/7d2c52b2-b8cc-421b-bfb8-28c9ba8e2ec1.htm">Special Terms for Configuration Files</a></td></tr>
+            <tr><td>#45</td><td>Error 1502, Buffer issue</td><td>note and example from the issue added, no own test</td><td><a href="/html/b0f634ab-76e4-4fe9-ae51-2360fbd864ec.htm">Error 1502</a></td></tr>
+            <tr><td>#46</td><td>Error 34 info in help is inaccurate</td><td>confirmed, added</td><td><a href="/html/9c58ba1d-9e45-479e-af68-4a5f8b1d1135.htm">Error 34</a></td></tr>
+            <tr><td>#47</td><td>define which types are valid in AS clause</td><td>closed by VFPX</td><td>&ndash;</td></tr>
+            <tr><td>#48</td><td>SYS(15) parameters inverted</td><td>not applicable: concerns the Hacker's Guide, not this help</td><td>&ndash;</td></tr>
+            <tr><td>#49</td><td>Incorrect heading in Build Method topic</td><td>fixed</td><td><a href="/html/9524c9ff-ad61-46e9-886a-96053e1b29d9.htm">Build Method</a></td></tr>
+            <tr><td>#50</td><td>The SYS(2014) and current path</td><td>confirmed, added</td><td><a href="/html/89cb7df0-784b-4675-95f8-76e51cd20a61.htm">SYS(2014) - Minimum Path</a></td></tr>
+            <tr><td>#51</td><td>Project.HomeDir, usage</td><td>confirmed: file paths are stored relative to the .pjx, not to HomeDir; added</td><td><a href="/html/4a34c188-15a2-4d75-a350-ff0589bf98ef.htm">HomeDir Property</a></td></tr>
+          </table>
+        </div>
+
+        <h4 class="subHeading">Other corrections by k-advice</h4>
+        <ul>
+          <li><p>Typing errors in the texts of pull request #25.</p></li>
+          <li><p>Pull request #25 saved three topics in Windows-1252 although they declare UTF-8: ALTER TABLE was converted back; ADD TABLE and GetKey Method stay as in v1.08, as the pull request changed nothing else there.</p></li>
+          <li><p>DTOC( ): the example code and a link were broken by a line wrap in the pull request.</p></li>
+          <li><p>TTOC( ): a broken paragraph tag from the pull request.</p></li>
+          <li><p>Syntax and code blocks: line height 150% (local\Classic.css) for better readability.</p></li>
+        </ul>
+      </div>
+      <div id="footer">
+        <div class="footerLine"><img width="100%" height="3px" alt="Footer image" src="../local/footer.gif"></img></div>
+        <p>k-advice software GmbH, based on the Microsoft Visual FoxPro 9 SP2 Help file, VFPX Edition v1.08. 2009-2017 Placed under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons licensing</a> by Microsoft Corporation.</p>
+      </div>
+    </div>
+  </body>
+</html>
+<OBJECT type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="ALink Name" value="k-advice changes">
+</OBJECT>

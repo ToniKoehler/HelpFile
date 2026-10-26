@@ -23470,6 +23470,15 @@
 	</OBJECT>
 </UL>
 <!-- VFPX -->
+<!-- k-advice -->
+<UL>
+<LI> <OBJECT type="text/sitemap">
+	    <param name="Name" value="k-advice: Changes to this help file">
+	    <param name="Local" value="html/kadvice-changes.htm">
+	    <param name="ImageNumber" value="10">
+	</OBJECT>
+</UL>
+<!-- k-advice -->
       </UL>
   </UL>
 </BODY>
