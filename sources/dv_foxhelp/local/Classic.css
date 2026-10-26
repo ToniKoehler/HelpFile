@@ -708,6 +708,7 @@ div.code pre
 	color:	#000066;
 	word-wrap:	break-word;
     margin: 0;  /* FF VFPX add */
+    line-height: 150%;  /* k-advice: half a blank line between code lines */
 }
 
 /* Formats parameter tooltips. */
