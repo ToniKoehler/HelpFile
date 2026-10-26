@@ -72,6 +72,12 @@
         </div>
         <font color="DarkGray"></font><p />
     <p>Visual FoxPro could not write to the selected record because it is in use.</p>
+    <p>The error can also occur with pessimistic buffering when the record lock is released before the changes are saved: TABLEUPDATE( ) then returns .F., and AERROR( ) reports error 1502.</p>
+    <pre>USE MyTable
+CURSORSETPROP('Buffering', 4)
+REPLACE MyField WITH MyField
+UNLOCK ALL
+? TABLEUPDATE()   &amp;&amp; .F., error 1502</pre>
   </div>
       <div id="footer">
         <div class="footerLine">

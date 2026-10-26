@@ -77,6 +77,8 @@
         <p>There was not enough memory for Visual FoxPro to complete an operation.</p>
       </li><li>
         <p>Unions between differing column types are not allowed when one of the columns is of <b>Memo</b> or <b>General</b> type unless <b>UNION ALL</b> is used.</p>
+      </li><li>
+        <p>A <b>UNION</b> without <b>ALL</b> raises the error whenever a <b>Memo</b> field is in the result, even if both sides have the same <b>Memo</b> column: removing duplicate rows needs to compare the memo values. Use <b>UNION ALL</b>.</p>
       </li></ul>
   </div>
       <div id="footer">

@@ -411,6 +411,7 @@ TRANSFORM(0hFE0AF2, "####")</pre></td></tr></table></span></div>
             <p>Removes trailing zeros from the decimal portion of a numeric value when all the numbers following the decimal point are zeros.</p>
             <p>If the numeric value is a whole number, a decimal point is not included in the transformed value, for example, 4.0 is transformed to 4. </p>
             <p>If the numeric value is less than one but greater than negative one, zero is included before the decimal point, for example, .4 is transformed to 0.4.</p>
+            <p><b>Note:</b> This applies only with SET FIXED OFF. With SET FIXED ON, the value is shown with the number of decimal places of SET DECIMALS: with SET DECIMALS TO 2, TRANSFORM(1) returns "1.00", not "1". With a format code such as "9999.9999", the result also depends on SET DECIMALS. The decimal separator follows SET POINT.</p>
           </td>
         </tr><tr>
           <td>

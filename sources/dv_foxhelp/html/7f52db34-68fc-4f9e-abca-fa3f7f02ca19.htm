@@ -147,6 +147,7 @@ REPLACE <span class="parameter">FieldName1</span> WITH <span class="parameter">e
   <h1 class="heading"><span onclick="ExpandCollapse(remarksToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(remarksToggle)" tabindex="0"><img id="remarksToggle" onload="OnLoadImage()" class="toggle" name="toggleSwitch" alt="Expand image" src="../local/expand_all.gif"></img>Remarks</span></h1><div id="remarksSection" class="section" name="collapseableSection" style="display: none;">
     
       <p>REPLACE replaces data in a field with the value in an expression. Fields in unselected work areas must be prefaced with their alias.</p>
+      <p>One REPLACE command can change at most 128 fields. With 129 or more fields it raises a syntax error (error 10), even if the command is shorter than 8,192 characters.</p>
       <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" alt="Note" src="../local/note.gif"></img>Note </th></tr><tr><td>
         <p>If the IN clause is omitted, no replacement occurs if the record pointer is at the end of the file in the current work area and you specify a field in another work area.</p>
       </td></tr></table></div>

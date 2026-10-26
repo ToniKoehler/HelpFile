@@ -142,6 +142,7 @@ ENDSCAN</pre></td></tr></table></span></div></div><p /><h4 class="subHeading">Pa
       <p>SCAN automatically advances the record pointer to the next record that meets the specified conditions and executes the block of commands.</p>
       <p>You can place comments after ENDSCAN on the same line. The comments are ignored during program compilation and execution.</p>
       <p>SCAN ... ENDSCAN ensures that, upon reaching ENDSCAN, Visual FoxPro reselects the table that was current when the SCAN ... ENDSCAN loop began.</p>
+      <p>A SELECT command of that alias right before ENDSCAN is therefore not needed, even if the loop selects other work areas.</p>
     
   </div><h1 class="heading"><span onclick="ExpandCollapse(codeExampleToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(codeExampleToggle)" tabindex="0"><img id="codeExampleToggle" onload="OnLoadImage()" class="toggle" name="toggleSwitch" alt="Expand image" src="../local/expand_all.gif"></img>Example</span></h1><div id="codeExampleSection" class="section" name="collapseableSection" style="display: none;">
     <description xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">

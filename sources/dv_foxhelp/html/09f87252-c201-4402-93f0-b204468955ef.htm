@@ -238,8 +238,30 @@ MESSAGEBOX(<span class="parameter">eMessageText</span> [, <span class="parameter
                 <p>Third button</p>
               </td>
             </tr></table></div>
+          <div class="labelheading"><b></b></div><div class="tableSection"><table width="100%" cellspacing="2" cellpadding="5"><tr>
+                <th>
+                  Value
+                </th>
+                <th>
+                  Modality
+                </th>
+              </tr><tr>
+              <td>
+                <p>0</p>
+              </td>
+              <td>
+                <p>Application modal (MB_APPLMODAL)</p>
+              </td>
+            </tr><tr>
+              <td>
+                <p>4096</p>
+              </td>
+              <td>
+                <p>System modal (MB_SYSTEMMODAL): the message box stays on top of all windows</p>
+              </td>
+            </tr></table></div>
           <p>
-            <span class="parameter">nDialogBoxType</span> can be the sum of up to three values, one value from each of the preceding tables. For example, if <span class="parameter">nDialogBoxType</span> is 290 (2+32+256), the specified dialog box has the following characteristics:   </p>
+            <span class="parameter">nDialogBoxType</span> can be the sum of up to four values, one value from each of the preceding tables. For example, if <span class="parameter">nDialogBoxType</span> is 290 (2+32+256), the specified dialog box has the following characteristics:   </p>
           <ul><li>
               <p>Abort, Retry, and Ignore buttons.</p>
             </li><li>

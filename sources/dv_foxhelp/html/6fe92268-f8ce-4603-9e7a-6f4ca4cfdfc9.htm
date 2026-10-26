@@ -112,7 +112,7 @@ SET TABLEVALIDATE TO [<span class="parameter">nLevel</span>]</pre></td></tr></ta
         </span></dt><dd>
           <p>Specifies the level of table validation as the sum of the bit values. </p>
           <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" alt="Note" src="../local/note.gif"></img>Note </th></tr><tr><td>
-            <p>The default setting for <span class="parameter">nLevel</span> is 3. </p>
+            <p>The default setting for <span class="parameter">nLevel</span> is 3 (1 + 2). </p>
           </td></tr></table></div>
           <p>The following table describes the bits and bit values that you can add to obtain a setting for <span class="parameter">nLevel</span>.   </p>
           <div class="labelheading"><b></b></div><div class="tableSection"><table width="100%" cellspacing="2" cellpadding="5"><tr>
@@ -179,7 +179,7 @@ SET TABLEVALIDATE TO [<span class="parameter">nLevel</span>]</pre></td></tr></ta
                 <p>8</p>
               </td>
               <td>
-                <p>Check .dbf header before saving append operation to disk and modifying header.</p>
+                <p>Check .dbf header before saving append operation to disk and modifying header: first the header is checked, then the appended data is written to disk, and then the header is modified.</p>
               </td>
             </tr></table></div>
         </dd></dl>

@@ -76,6 +76,10 @@
       <code>X = Y</code>
     </p>
     <p>Syntax such as X = Y + 1 or X = 5 will produce this error.</p>
+    <p>The error is also raised when the WHERE clause of a subquery references only the outer table, for example <code>WHERE Cur1.iTyp = 1</code> instead of <code>WHERE Cur1.iTyp = Cur2.iTyp</code>:</p>
+    <pre>SELECT Cur1.* FROM myTable AS Cur1 ;
+   WHERE Cur1.PIx NOT IN (SELECT Cur2.PIx FROM myTable AS Cur2 ;
+   WHERE Cur1.iTyp = 1)</pre>
   </div>
       <div id="footer">
         <div class="footerLine">

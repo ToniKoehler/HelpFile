@@ -129,6 +129,7 @@ DATE([<span class="parameter">nYear</span>, <span class="parameter">nMonth</span
     
       <p>DATE( ) returns the current system date if it is issued without the optional arguments. Include the optional arguments to return a year 2000-compliant Date value in the format set in the <a href="/html/dccf3775-eb55-441a-89ac-bca226da782e.htm">Regional tab</a> of the <a href="/html/a8286b0c-6b2c-4b8d-8e16-7db8dbda2a1f.htm">Options</a> dialog box. Any NULL parameter is replaced with the current system value. </p>
       <p>No Microsoft Visual FoxPro commands or functions can directly change the system date.</p>
+      <p>The smallest valid Date value is {^0000-03-01}, which only a date constant can produce. DATE( ) does not accept such small years: DATE(0, 3, 1) and DATE(1, 1, 1) raise error 11. Subtracting from {^0000-03-01} gives no error, but an invalid date (DTOS( ) returns 00000300).</p>
     
   </div><h1 class="heading"><span onclick="ExpandCollapse(codeExampleToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(codeExampleToggle)" tabindex="0"><img id="codeExampleToggle" onload="OnLoadImage()" class="toggle" name="toggleSwitch" alt="Expand image" src="../local/expand_all.gif"></img>Example</span></h1><div id="codeExampleSection" class="section" name="collapseableSection" style="display: none;">
     <description xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">

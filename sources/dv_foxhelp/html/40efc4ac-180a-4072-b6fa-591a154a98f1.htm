@@ -254,6 +254,7 @@ ENDTEXT</pre></td></tr></table></span></div>
       <div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left"><img class="note" alt="Note" src="../local/note.gif"></img>Note </th></tr><tr><td>
         <p>The text merge process usually includes any white space that might appear before each line in a <b>TEXT...ENDTEXT</b> statement. However, the inclusion of white space might cause the text merge to fail, for example, when XML is used in a Web browser. You must remove such white space to avoid incorrectly formatted XML.</p>
       </td></tr></table></div>
+      <p>With TEXTMERGE, line ends in merged values are changed: a single line feed (LF, CHR(10)) is removed, a single carriage return (CR, CHR(13)) becomes CR+LF, and CR+LF stays. The PRETEXT setting does not change this. Values read from files with LF line ends therefore lose their line breaks.</p>
       <p>Nesting TEXT...ENDTEXT statements is not recommended, especially if using the PRETEXT clause because the nested statements can affect the format of the outer statements.</p>
     
   </div><h1 class="heading"><span onclick="ExpandCollapse(codeExampleToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(codeExampleToggle)" tabindex="0"><img id="codeExampleToggle" onload="OnLoadImage()" class="toggle" name="toggleSwitch" alt="Expand image" src="../local/expand_all.gif"></img>Example</span></h1><div id="codeExampleSection" class="section" name="collapseableSection" style="display: none;">
