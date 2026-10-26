@@ -114,6 +114,7 @@ TTOC(<span class="parameter">tExpression</span> [, 1 | 2 | 3])</pre></td></tr></
           <p>If <span class="parameter">tExpression</span> contains only a time, Visual FoxPro adds the default date of 12/30/1899 to <span class="parameter">tExpression</span>. If <span class="parameter">tExpression</span> contains only a date, Visual FoxPro adds a default time of 12:00:00 AM (if SET HOURS is 12) or 00:00:00 (if SET HOURS is 24) to <span class="parameter">tExpression</span> to produce a valid DateTime value.</p>
         </dd></dl><dl><dt><span class="nonLinkTerms">No second parameter </span></dt><dd>
           <p>Returns <span class="parameter">tExpression</span> as a character string in a (general) date format respecting the <b>SET</b> commands dealing with date and time, just like the output of <b>?DATETIME()</b>.</p>
+          <p>With <b>SET DATE SHORT</b> or <b>SET DATE LONG</b>, the format is taken from Windows and <b>SET SECONDS</b> has no effect.</p>
           <p>For more information, see 
           	<a href="/html/d376a010-d478-439f-8aa7-517bcd617558.htm">SET CENTURY</a>,
           	<a href="/html/96aefa03-0504-48c8-9fc0-013b3e1c43aa.htm">SET DATE</a>,
@@ -125,12 +126,12 @@ TTOC(<span class="parameter">tExpression</span> [, 1 | 2 | 3])</pre></td></tr></
           <p>Returns <span class="parameter">tExpression</span> as a character string in a format suitable for indexing. The character string returned has a 14-character format, yyyymmddhhmmss, that is not affected by the <b>SET CENTURY</b>, the <b>SET HOURS</b>, or <b>SET SECONDS</b> commands.</p>
           <p>For more information, see
           	<a href="/html/d376a010-d478-439f-8aa7-517bcd617558.htm">SET CENTURY</a>,
-          	<a href="/html/caab5d93-12b7-468d-88f4-4d2b2fc203fd.htm">SET HOURS</a>,and 
+          	<a href="/html/caab5d93-12b7-468d-88f4-4d2b2fc203fd.htm">SET HOURS</a>, and
           	<a href="/html/a757d365-37be-4306-bb8c-b95c10f6eb72.htm">SET SECONDS</a>.</p>
         </dd></dl><dl><dt><span class="nonLinkTerms">2 </span></dt><dd>
           <p>Returns <span class="parameter">tExpression</span> as a character string containing only the time portion of <span class="parameter">tExpression</span>. </p>
-          <p>To control whether to include the seconds of the time portion in the character string, set the <b>SET SECONDS</b> command.</p>
-          <p>The <b>SET HOURS</b> command determines if AM or PM is appended to the time portion </p>returned.</p>
+          <p>To control whether to include the seconds of the time portion in the character string, set the <b>SET SECONDS</b> and <b>SET DATE</b> commands.</p>
+          <p>The <b>SET HOURS</b> command determines if AM or PM is appended to the time portion returned.</p>
           <p>For more information, see
           	<a href="/html/96aefa03-0504-48c8-9fc0-013b3e1c43aa.htm">SET DATE</a> and
           	<a href="/html/caab5d93-12b7-468d-88f4-4d2b2fc203fd.htm">SET HOURS</a>.   </p>
